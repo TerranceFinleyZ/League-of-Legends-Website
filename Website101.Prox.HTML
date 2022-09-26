@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mywebsite.HTML</title>
+    <link rel="stylesheet" href="stylet.css" />
+</head>
+<body>
+ 
+    
+   <header>
+     <a href="#" class="brand">Terrance Finley</a>
+     <div class="menu-btn"></div>
+       <div class="navigation">
+         <div class="navigation-items">
+           <a href="#">Home</a>
+           <a href="#">About</a>
+           <a href="#">Explore</a>
+           <a href="#">Gallery</a>
+           <a href="#">Contact</a>
+         </div>
+        </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src=''https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/rRn0DkA9isby42wd/videoblocks-rocket25_rxukw4vj5__b3ee7f894d01109c7777ad49a371c4b9__P360.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/r6WGz19Hlixicehiv/flying-over-nashville-skyscrapers-towards-river-002_sfgwlx9yix__3e7836356cbe0021cc90a28943f8b3ac__P360.mp4" autoplay muted loop></video>
+      <video class="video-slide" src''https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/rsQqpRl_giyolfq25/videoblocks-view-from-bow-sailing-boat-in-sea-on-mountain-with-snowy-peaks_syc1yu-ex__13c9555c9e4152fb917a2007d4f8d827__P360.mp4" autoplay muted loop></video>
+      <video class="video-slide" src=''https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/2O0VXeG/mumbai-india-12-january-2015-people-and-vehicles-passing-down-the-street-in-mumbai_n116nstd__654a9a83fca9f8c504f1179bd83f0d45__P360.mp4" autoplay muted loop></video>
+      <video class="video-slide" src=''https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/hEaS0zg/train-passing-through-countryside-moving-railroad-tracks_4yuwkdsd__2656668cfbb2c7bc407425b10284b09f__P360.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>About<br><span>Me.</span></h1>
+        <p>Im a Full stack DEV developer with many years of experians.
+           I have created apps, websites, e-commerce sites and Data-bases and API's.</p>
+        
+      </div>
+      <div class="content">
+        <h1>Programming<br><span>Languages.</span></h1>
+        <p>I use Java, JS, Ruby, Python, HTML-CSS, C# and C++. 
+          Most Languages have a lot of cross over so If needed I can learn other Languages.</p>
+        
+      </div>
+      <div class="content">
+        <h1>Back<br><span>End.</span></h1>
+        <p>I mainly use React or Rails. 
+            I am experienced in building C.R.U.D applications.
+           I have experience with SpringBoot, Jquery, Anguler Node.js, PHP and MySQL when needed.</p>
+       
+      </div>
+      <div class="content">
+        <h1>Goal in<br><span>Life.</span></h1>
+        <p>I want to be a team lead and manager, I have the skills and mindset I know I can bring success in to any project.
+             I have managed over 40 agents as a Operations manager and Lead specialist before.
+          But my main Goal is to one day work for F.A.N.G. as a Tech Lead.</p>
+        
+      </div>
+      <div class="content">
+        <h1>My Skills and<br><span>Mindset.</span></h1>
+        <p>I Have many High-end skills and a Rock solid and competent and competitve mindset.
+          Because I have worked in hight commpenditive companys I know the meaning of hard work and a unstoppable work ethic.
+        I have developed a Advanced problem solving Skill that can and has help me with Debugging error and any faulty code.</p>
+        
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-Twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+     //java
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function(manual){
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        }); 
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        }); 
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      }
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+       
+  </body>
+</html>
+
