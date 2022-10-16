@@ -1,2 +1,2 @@
-My simple Vid. site.
-https://terrancefinleyz.github.io/MyWebsite-/glow.html
+Worlds 2022 Website
+with responsive modern UI/UX, Tailwind and npm-Vite+React
